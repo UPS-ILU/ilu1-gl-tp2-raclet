@@ -58,8 +58,6 @@ public class Main {
 			}
 		} catch (NumberFormatException e) {
 			System.out.println("Please enter a number from 0 - 6");
-		} finally {
-			mainMenu();
 		}
 	}
 
@@ -78,7 +76,6 @@ public class Main {
 		} else {
 			System.out.println(r.getName() + " could not be added.\n");
 		}
-		mainMenu();
 	}
 
 	/**
@@ -102,7 +99,6 @@ public class Main {
 				System.out.println("Selected recipe doesn't exist and could not be deleted.\n");
 			}
 		}
-		mainMenu();
 	}
 
 	/**
@@ -127,7 +123,6 @@ public class Main {
 				System.out.println(recipeEdited + "could not be edited.\n");
 			}
 		}
-		mainMenu();
 	}
 
 	private static Recipe createRecipeFromInput() {
@@ -180,7 +175,6 @@ public class Main {
 		} else {
 			System.out.println("Inventory was not added");
 		}
-		mainMenu();
 	}
 
 	/**
@@ -188,7 +182,6 @@ public class Main {
 	 */
 	public static void checkInventory() {
 		System.out.println(coffeeMaker.checkInventory());
-		mainMenu();
 	}
 
 	/**
@@ -219,8 +212,6 @@ public class Main {
 			System.out.println("Your change is: " + change + "\n");
 		} catch (NumberFormatException e) {
 			System.out.println("Please enter a positive integer");
-		} finally {
-			mainMenu();
 		}
 	}
 
@@ -239,7 +230,6 @@ public class Main {
 		}
 		catch (IOException e){
 			System.out.println("Error reading in value");
-			mainMenu();
 		}
 		return returnString;
 	}
@@ -289,6 +279,7 @@ public class Main {
 	public static void main(String[] args) {
 		coffeeMaker = new CoffeeMaker();
 		System.out.println("Welcome to the CoffeeMaker!\n");
-		mainMenu();
-	}
+		do {
+			mainMenu();
+		} while (true);	}
 }
