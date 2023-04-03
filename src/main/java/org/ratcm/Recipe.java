@@ -33,8 +33,8 @@ public class Recipe {
 	 * @param chocolate   The amount of chocolate to set.
 	 */
     public void setAmtChocolate(int chocolate) {
-		if (amtChocolate >= 0) {
-			this.amtChocolate = amtChocolate;
+		if (chocolate >= 0) {
+			this.amtChocolate = chocolate;
 		}
 	}
 
@@ -49,8 +49,8 @@ public class Recipe {
 	 * @param coffee   The amount of coffee to set.
 	 */
     public void setAmtCoffee(int coffee) {
-		if (amtCoffee >= 0) {
-			this.amtCoffee = amtCoffee;
+		if (coffee >= 0) {
+			this.amtCoffee = coffee;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class Recipe {
 	 * @param milk   The amount of milk to set.
 	 */
     public void setAmtMilk(int milk) {
-		if (amtMilk >= 0) {
-			this.amtMilk = amtMilk;
+		if (milk >= 0) {
+			this.amtMilk = milk;
 		}
 	}
 
@@ -81,8 +81,8 @@ public class Recipe {
 	 * @param sugar   The amount of sugar to set.
 	 */
     public void setAmtSugar(int sugar) {
-		if (amtSugar >= 0) {
-			this.amtSugar = amtSugar;
+		if (sugar >= 0) {
+			this.amtSugar = sugar;
 		}
 	}
 
