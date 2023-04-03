@@ -70,11 +70,11 @@ public class Main {
 		Recipe r = new Recipe();
 		try {
 			r.setName(name);
-			r.setPrice(priceString);
-			r.setAmtCoffee(coffeeString);
-			r.setAmtMilk(milkString);
-			r.setAmtSugar(sugarString);
-			r.setAmtChocolate(chocolateString);
+			r.setPrice(Integer.parseInt(priceString));
+			r.setAmtCoffee(Integer.parseInt(coffeeString));
+			r.setAmtMilk(Integer.parseInt(milkString));
+			r.setAmtSugar(Integer.parseInt(sugarString));
+			r.setAmtChocolate(Integer.parseInt(chocolateString));
 
 			boolean recipeAdded = coffeeMaker.addRecipe(r);
 
@@ -83,7 +83,7 @@ public class Main {
 			} else {
 				System.out.println(name + " could not be added.\n");
 			}
-		} catch (RecipeException e) {
+		} catch (NumberFormatException e) {
 			System.out.println(e.getMessage());
 		} finally {
 			mainMenu();
@@ -149,11 +149,11 @@ public class Main {
 
 		Recipe newRecipe = new Recipe();
 		try {
-			newRecipe.setPrice(priceString);
-			newRecipe.setAmtCoffee(coffeeString);
-			newRecipe.setAmtMilk(milkString);
-			newRecipe.setAmtSugar(sugarString);
-			newRecipe.setAmtChocolate(chocolateString);
+			newRecipe.setPrice(Integer.parseInt(priceString));
+			newRecipe.setAmtCoffee(Integer.parseInt(coffeeString));
+			newRecipe.setAmtMilk(Integer.parseInt(milkString));
+			newRecipe.setAmtSugar(Integer.parseInt(sugarString));
+			newRecipe.setAmtChocolate(Integer.parseInt(chocolateString));
 
 			String recipeEdited = coffeeMaker.editRecipe(recipeToEdit, newRecipe);
 
@@ -163,7 +163,7 @@ public class Main {
 			else {
 				System.out.println(recipeEdited + "could not be edited.\n");
 			}
-		} catch (RecipeException e) {
+		} catch (NumberFormatException e) {
 			System.out.println(e.getMessage());
 		} finally {
 			mainMenu();

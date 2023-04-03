@@ -32,17 +32,9 @@ public class Recipe {
     /**
 	 * @param chocolate   The amount of chocolate to set.
 	 */
-    public void setAmtChocolate(String chocolate) throws RecipeException {
-    	int amtChocolate = 0;
-    	try {
-    		amtChocolate = Integer.parseInt(chocolate);
-    	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of chocolate must be a positive integer");
-    	}
+    public void setAmtChocolate(int chocolate) {
 		if (amtChocolate >= 0) {
 			this.amtChocolate = amtChocolate;
-		} else {
-			throw new RecipeException("Units of chocolate must be a positive integer");
 		}
 	}
 
@@ -56,17 +48,9 @@ public class Recipe {
     /**
 	 * @param coffee   The amount of coffee to set.
 	 */
-    public void setAmtCoffee(String coffee) throws RecipeException {
-    	int amtCoffee = 0;
-    	try {
-    		amtCoffee = Integer.parseInt(coffee);
-    	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of coffee must be a positive integer");
-    	}
+    public void setAmtCoffee(int coffee) {
 		if (amtCoffee >= 0) {
 			this.amtCoffee = amtCoffee;
-		} else {
-			throw new RecipeException("Units of coffee must be a positive integer");
 		}
 	}
 
@@ -80,17 +64,9 @@ public class Recipe {
 	/**
 	 * @param milk   The amount of milk to set.
 	 */
-    public void setAmtMilk(String milk) throws RecipeException{
-    	int amtMilk = 0;
-    	try {
-    		amtMilk = Integer.parseInt(milk);
-    	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of milk must be a positive integer");
-    	}
+    public void setAmtMilk(int milk) {
 		if (amtMilk >= 0) {
 			this.amtMilk = amtMilk;
-		} else {
-			throw new RecipeException("Units of milk must be a positive integer");
 		}
 	}
 
@@ -104,17 +80,9 @@ public class Recipe {
 	/**
 	 * @param sugar   The amount of sugar to set.
 	 */
-    public void setAmtSugar(String sugar) throws RecipeException {
-    	int amtSugar = 0;
-    	try {
-    		amtSugar = Integer.parseInt(sugar);
-    	} catch (NumberFormatException e) {
-    		throw new RecipeException("Units of sugar must be a positive integer");
-    	}
+    public void setAmtSugar(int sugar) {
 		if (amtSugar >= 0) {
 			this.amtSugar = amtSugar;
-		} else {
-			throw new RecipeException("Units of sugar must be a positive integer");
 		}
 	}
 
@@ -142,19 +110,11 @@ public class Recipe {
 	}
 
     /**
-	 * @param price   The price to set.
+	 * @param newPrice   The price to set.
 	 */
-    public void setPrice(String price) throws RecipeException{
-    	int amtPrice = 0;
-    	try {
-    		amtPrice = Integer.parseInt(price);
-    	} catch (NumberFormatException e) {
-    		throw new RecipeException("Price must be a positive integer");
-    	}
-		if (amtPrice >= 0) {
-			this.price = amtPrice;
-		} else {
-			throw new RecipeException("Price must be a positive integer");
+    public void setPrice(int newPrice) {
+		if (newPrice >= 0) {
+			this.price = newPrice;
 		}
 	} 
     
